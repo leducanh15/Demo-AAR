@@ -1,15 +1,16 @@
-apply plugin: 'com.android.application'
-
+apply plugin: 'com.android.library'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
+
     defaultConfig {
-        applicationId "com.foody.demoaar"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
@@ -28,3 +29,28 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'foody'
+    bintrayName = 'demo'
+
+    publishedGroupId = 'com.github.leducanh15'
+    libraryName = 'DemoAAR'
+    artifact = 'demo'
+
+    libraryDescription = 'A wrapper for Facebook Native Like Button (LikeView) on Android'
+
+    siteUrl = 'https://github.com/leducanh15/Demo-AAR'
+    gitUrl = 'https://github.com/leducanh15/Demo-AAR.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'leducanh15'
+    developerName = 'Le Duc Anh'
+    developerEmail = 'leducanh.bkit10@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
